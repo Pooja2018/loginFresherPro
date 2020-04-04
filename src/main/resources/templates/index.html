@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <script>
+        function validateForm()
+        {
+            var x = document.forms["myForm"]["uname"].value;
+            var y = document.forms["myForm"]["pwd"].value;
+            if(x=="fresherpro" && y=="fresherpro")
+            {
+                document.write("Welcome "+x+"!");
+                return true;
+            }
+            else
+            {
+                document.write("Invalid Login Credentials!");
+            }
+        }
+    </script>
+</head>
+<body>
+<p>Please enter credentials below</p>
+    <form name="myForm" onsubmit="return validateForm()" method="post">
+        <input type="text" placeholder="Username" name="uname">
+        <input type="password" placeholder="Password" name="pwd">
+        <button type="submit">Login</button>
+    </form>
+
+
+</body>
+
+
+</html>
